@@ -21,13 +21,4 @@ import userRouter from './routes/user.routes.js'
 //routes declaration
 app.use('/api/v1/users', userRouter)
 
-// Health check endpoint
-app.get('/api/v1/health', (req, res) => {
-    res.status(200).json({
-        status: 'ok',
-        message: 'Server is running',
-        timestamp: new Date().toISOString()
-    });
-});
-
 export default app;
